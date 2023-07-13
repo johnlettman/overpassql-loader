@@ -1,0 +1,2 @@
+# avoid linting installed packages
+node_modules
