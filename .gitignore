@@ -1,6 +1,9 @@
 ### Build ###
 lib
 
+### Docs ###
+docs
+
 ### Node ###
 # Logs
 logs
