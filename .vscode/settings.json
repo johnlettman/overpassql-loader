@@ -1,0 +1,21 @@
+{
+    "[typescript]": {
+                "editor.defaultFormatter": "esbenp.prettier-vscode",
+                "editor.formatOnPaste": false,
+                "editor.formatOnType": false,
+                "editor.formatOnSave": true,
+                "editor.formatOnSaveMode": "file",
+                "files.autoSave": "onFocusChange",
+                "vs-code-prettier-eslint.prettierLast": "false"
+    },
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnPaste": false,
+        "editor.formatOnType": false,
+        "editor.formatOnSave": true,
+        "editor.formatOnSaveMode": "file",
+        "files.autoSave": "onFocusChange",
+        "vs-code-prettier-eslint.prettierLast": "false"
+    },
+
+}
