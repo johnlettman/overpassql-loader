@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import {
   defaultPropertiesFilter,
   hasProperties,
@@ -8,7 +9,6 @@ import type { PropertiesFilter } from './types';
 
 describe('properties', () => {
   const rejectNonObjects = (f: (p: any) => any) => {
-    // eslint-disable-line @typescript-eslint/no-explicit-any
     it('should reject Nulls', () => {
       expect(f(null)).toBeFalsy();
     });
