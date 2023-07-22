@@ -1,11 +1,11 @@
 <div align="center">
   <a href="https://github.com/webpack/webpack">
-    <img height="200" vspace="" hspace="25"
-      src="./.github/assets/webpack-icon.svg">
+    <img height="100" vspace="" hspace="25"
+      src="https://raw.githubusercontent.com/johnlettman/overpassql-loader/main/.github/assets/webpack-icon.svg">
   </a>
   <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL">
-    <img height="200" vspace="" hspace="25"
-      src="./.github/assets/overpass-icon.svg">
+    <img height="100" vspace="" hspace="25"
+      src="https://raw.githubusercontent.com/johnlettman/overpassql-loader/main/.github/assets/overpass-icon.svg">
   </a>
   <h1>OverpassQL Loader</h1>
 </div>
@@ -104,6 +104,6 @@ overpassJson(query, { endpoint }).then((osmdata) => {
 
 
 ## License
-This project is licensed under the [MIT License](./LICENSE).
+This project is licensed under the MIT License.
 See `LICENSE` for more information.
 

@@ -1,0 +1,20 @@
+{
+  "$schema": "https://typedoc.org/schema.json",
+  "name": "OverpassQL Loader",
+  "readme": "./README.md",
+  "commentStyle": "jsdoc",
+  "entryPoints": [
+    "./src/loader.ts",
+    "./src/properties.ts",
+    "./src/syntax.ts",
+    "./src/types.d.ts"
+  ],
+  "plugin": [
+    "typedoc-plugin-coverage",
+    "typedoc-plugin-rename-defaults"
+  ],
+  "navigationLinks": {
+    "Repository": "https://github.com/johnlettman/overpassql-loader"
+  },
+  "out": "docs"
+}
