@@ -1,2 +1,8 @@
 # avoid linting installed packages
 node_modules
+
+# avoid linting builds
+lib
+
+# avoid linting test fixtures
+test
