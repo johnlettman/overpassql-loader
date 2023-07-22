@@ -2,30 +2,25 @@
   <a href="https://github.com/webpack/webpack">
     <img height="200" vspace="" hspace="25"
       src="./.github/assets/webpack-icon.svg">
+  </a>
+  <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL">
     <img height="200" vspace="" hspace="25"
       src="./.github/assets/overpass-icon.svg">
   </a>
   <h1>OverpassQL Loader</h1>
-  <p>
-    This Webpack loader allows you to pull in
-    <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL">
-      OverpassQL
-    </a>
-    files as strings, providing seamless integration of OpenStreetMap data into
-    your application.
-    <br><br>
-    Not only does it allow you to directly load OverpassQL scripts as part of
-    your Webpack build process, but it also optionally caches the responses
-    from an
-    <a href="https://wiki.openstreetmap.org/wiki/Overpass_API#Public_Overpass_API_instances">
-      Overpass API server
-    </a>
-    to speed up your production application.
-  <p>
 </div>
 
+This Webpack loader allows you to pull in
+[OverpassQL](https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL)
+files as strings, providing seamless integration of OpenStreetMap data into
+your application.
 
 
+Not only does it allow you to directly load OverpassQL scripts as part of
+your Webpack build process, but it also optionally caches the responses
+from an
+[Overpass API server](https://wiki.openstreetmap.org/wiki/Overpass_API#Public_Overpass_API_instances)
+to speed up your production application.
 
 ## Features
 - Implemented in TypeScript for strong type safety.
@@ -38,12 +33,11 @@ You can install the loader using `npm`, `yarn`, or your preferred JavaScript
 package management program.
 
 ```bash
-npm install --save-dev overpassql-loader
+yarn add --dev overpassql-loader
 ```
 _or_
-
 ```bash
-yarn add --dev overpassql-loader
+npm install --save-dev overpassql-loader
 ```
 
 ## Usage
