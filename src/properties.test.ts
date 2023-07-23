@@ -5,7 +5,7 @@ import {
   isTraversible,
   processProperties,
 } from './properties';
-import type { PropertiesFilter } from './types';
+import type { PropertiesFilter } from './loader';
 
 describe('properties', () => {
   const rejectNonObjects = (f: (p: any) => any) => {

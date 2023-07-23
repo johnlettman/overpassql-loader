@@ -1,8 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import loader from './loader';
-
-import type { Options } from './types';
+import type { Options } from './loader';
 
 declare type PsuedoCallback = (
   err?: null | Error,
