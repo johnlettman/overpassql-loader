@@ -40,10 +40,10 @@
     "typedoc-plugin-coverage": "^2.1.0",
     "typedoc-plugin-markdown": "^3.15.3",
     "typedoc-plugin-rename-defaults": "^0.6.5",
-    "typescript": "^5.1.6",
-    "webpack": "^5.88.1"
+    "typescript": "^5.1.6"
   },
-  "dependencies": {
+  "peerDependencies": {
+    "webpack": "^5.88.1",
     "geojson": "^0.5.0",
     "osmtogeojson": "^3.0.0-beta.5",
     "overpass-ts": "^4.3.8",
