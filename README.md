@@ -117,11 +117,7 @@ style. After all, I committed to unprotected main throughout this project.
 Please add any of the following strings to your commit message if the commit
 does not modify any code (e.g., documentation work):
 
-- `[skip ci]`
-- `[ci skip]`
-- `[no ci]`
-- `[skip actions]`
-- `[actions skip]`
+`[skip ci]`, `[ci skip]`, `[no ci]`, `[skip actions]`, `[actions skip]`
 
 See: [GitHub documentation, "skipping workflow runs"][ghdocs-skip-actions]
 
