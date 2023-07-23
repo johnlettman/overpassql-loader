@@ -5,5 +5,7 @@ if ! command -v jq >/dev/null 2>&1; then
 fi;
 
 version="$(jq -r '.version' package.json)";
+
 git tag -a "v${version}" -m "Release v${version}";
+git tag -s "v${version}";
 git push origin "v${version}";
