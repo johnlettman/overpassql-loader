@@ -6,6 +6,5 @@ fi;
 
 version="$(jq -r '.version' package.json)";
 
-git tag -a "v${version}" -m "Release v${version}";
-git tag -s "v${version}";
+git tag -s -a "v${version}" -m "Release v${version}";
 git push origin "v${version}";
