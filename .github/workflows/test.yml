@@ -1,9 +1,8 @@
-name: Test
 on: [push, pull_request]
 
 jobs:
-  test:
-    name: Test
+  lint:
+    name: Lint
     runs-on: ubuntu-latest
     timeout-minutes: 5
 
@@ -16,7 +15,43 @@ jobs:
       with:
         node-version-file: .nvmrc
 
+    - name: Install dependencies
+      run: yarn install --frozen-lockfile
+
     - name: Lint
       run: |
-        yarn
         yarn lint
+
+  test:
+    name: "Test - Node: ${{ matrix.node_version }} - OS: ${{ matrix.os }}"
+    runs-on: ubuntu-latest
+
+    strategy:
+      fail-fast: true
+      matrix:
+        os:
+          - "ubuntu-latest"
+        node_version:
+          - "16"
+          - "17"
+          - "18"
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+
+      - name: Setup Node ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Test with coverage
+        run: yarn coverage
+
+      - name: Report coverage
+        uses: codecov/codecov-action@v1
+        with:
+          file: coverage/lcov.info
