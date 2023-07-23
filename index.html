@@ -1,0 +1,141 @@
+<!DOCTYPE html><html class="default" lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>OverpassQL Loader</title><meta name="description" content="Documentation for OverpassQL Loader"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="assets/style.css"/><link rel="stylesheet" href="assets/highlight.css"/><script defer src="assets/main.js"></script><script async src="assets/search.js" id="tsd-search-script"></script></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os"</script><header class="tsd-page-toolbar">
+<div class="tsd-toolbar-contents container">
+<div class="table-cell" id="tsd-search" data-base=".">
+<div class="field"><label for="tsd-search-field" class="tsd-widget tsd-toolbar-icon search no-caption"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M15.7824 13.833L12.6666 10.7177C12.5259 10.5771 12.3353 10.499 12.1353 10.499H11.6259C12.4884 9.39596 13.001 8.00859 13.001 6.49937C13.001 2.90909 10.0914 0 6.50048 0C2.90959 0 0 2.90909 0 6.49937C0 10.0896 2.90959 12.9987 6.50048 12.9987C8.00996 12.9987 9.39756 12.4863 10.5008 11.6239V12.1332C10.5008 12.3332 10.5789 12.5238 10.7195 12.6644L13.8354 15.7797C14.1292 16.0734 14.6042 16.0734 14.8948 15.7797L15.7793 14.8954C16.0731 14.6017 16.0731 14.1267 15.7824 13.833ZM6.50048 10.499C4.29094 10.499 2.50018 8.71165 2.50018 6.49937C2.50018 4.29021 4.28781 2.49976 6.50048 2.49976C8.71001 2.49976 10.5008 4.28708 10.5008 6.49937C10.5008 8.70852 8.71314 10.499 6.50048 10.499Z" fill="var(--color-text)"></path></svg></label><input type="text" id="tsd-search-field" aria-label="Search"/></div>
+<div class="field">
+<div id="tsd-toolbar-links"><a href="https://github.com/johnlettman/overpassql-loader">Repository</a></div></div>
+<ul class="results">
+<li class="state loading">Preparing search index...</li>
+<li class="state failure">The search index is not available</li></ul><a href="index.html" class="title">OverpassQL Loader</a></div>
+<div class="table-cell" id="tsd-widgets"><a href="#" class="tsd-widget tsd-toolbar-icon menu no-caption" data-toggle="menu" aria-label="Menu"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="1" y="3" width="14" height="2" fill="var(--color-text)"></rect><rect x="1" y="7" width="14" height="2" fill="var(--color-text)"></rect><rect x="1" y="11" width="14" height="2" fill="var(--color-text)"></rect></svg></a></div></div></header>
+<div class="container container-main">
+<div class="col-content">
+<div class="tsd-page-title">
+<h2>OverpassQL Loader</h2></div>
+<div class="tsd-panel tsd-typography"><div align="center">
+  <a href="https://github.com/webpack/webpack">
+    <img height="100" vspace="" hspace="25"
+      src="https://raw.githubusercontent.com/johnlettman/overpassql-loader/main/.github/assets/webpack-icon.svg">
+  </a>
+  <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL">
+    <img height="100" vspace="" hspace="25"
+      src="https://raw.githubusercontent.com/johnlettman/overpassql-loader/main/.github/assets/overpass-icon.svg">
+  </a>
+  <h1>OverpassQL Loader</h1>
+</div>
+
+<p><a href="https://github.com/johnlettman/overpassql-loader/blob/main/LICENSE"><img src="https://img.shields.io/npm/l/overpassql-loader?style=for-the-badge" alt="License"></a>
+<a href="https://www.npmjs.com/package/overpassql-loader"><img src="https://img.shields.io/npm/v/overpassql-loader?style=for-the-badge&logo=npm" alt="Package Version"></a>
+<img src="https://img.shields.io/github/languages/top/johnlettman/overpassql-loader?style=for-the-badge&logo=typescript" alt="Programming Language">
+<img src="https://img.shields.io/bundlephobia/min/overpassql-loader?style=for-the-badge" alt="Minimized Size">
+<img src="https://img.shields.io/github/actions/workflow/status/johnlettman/overpassql-loader/test.yml?style=for-the-badge&logo=github&label=test" alt="Test Results">
+<a href="https://codecov.io/gh/johnlettman/overpassql-loader"><img src="https://img.shields.io/codecov/c/github/johnlettman/overpassql-loader?style=for-the-badge&logo=codecov" alt="Code Coverage"></a></p>
+<p>This Webpack loader allows you to pull in <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL">OverpassQL</a> files as
+strings, providing seamless integration of OpenStreetMap data into your
+application.</p>
+<p>Not only does it allow you to directly load OverpassQL scripts as part of
+your Webpack build process, but it also optionally caches the responses
+from an <a href="https://wiki.openstreetmap.org/wiki/Overpass_API#Public_Overpass_API_instances">Overpass API server</a> to speed up your
+production application.</p>
+<a id="md:features" class="tsd-anchor"></a><h2><a href="#md:features">Features</a></h2><ul>
+<li>Implemented in TypeScript for strong type safety.</li>
+<li>Load OverpassQL scripts as strings into your JavaScript or TypeScript
+application.</li>
+<li>Optionally cache responses from an Overpass API server.</li>
+</ul>
+<a id="md:installation" class="tsd-anchor"></a><h2><a href="#md:installation">Installation</a></h2><p>You can install the loader using <code>npm</code>, <code>yarn</code>, or your preferred JavaScript
+package management program.</p>
+<pre><code class="language-bash"><span class="hl-0">yarn</span><span class="hl-1"> </span><span class="hl-2">add</span><span class="hl-1"> </span><span class="hl-3">--dev</span><span class="hl-1"> </span><span class="hl-2">overpassql-loader</span>
+</code><button>Copy</button></pre>
+<p><em>or</em></p>
+<pre><code class="language-bash"><span class="hl-0">npm</span><span class="hl-1"> </span><span class="hl-2">install</span><span class="hl-1"> </span><span class="hl-3">--save-dev</span><span class="hl-1"> </span><span class="hl-2">overpassql-loader</span>
+</code><button>Copy</button></pre>
+<a id="md:usage" class="tsd-anchor"></a><h2><a href="#md:usage">Usage</a></h2><p>Add <code>overpassql-loader</code> to your Webpack configuration:</p>
+<pre><code class="language-typescript"><span class="hl-4">import</span><span class="hl-1"> </span><span class="hl-4">type</span><span class="hl-1"> { </span><span class="hl-5">Configuration</span><span class="hl-1">, </span><span class="hl-5">RuleSetUse</span><span class="hl-1"> } </span><span class="hl-4">from</span><span class="hl-1"> </span><span class="hl-2">&#39;webpack&#39;</span><span class="hl-1">;</span><br/><span class="hl-4">import</span><span class="hl-1"> </span><span class="hl-4">type</span><span class="hl-1"> { </span><span class="hl-5">PropertiesFilter</span><span class="hl-1"> } </span><span class="hl-4">from</span><span class="hl-1"> </span><span class="hl-2">&#39;overpassql-loader&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-3">const</span><span class="hl-1"> </span><span class="hl-6">IS_DEV</span><span class="hl-1">: </span><span class="hl-7">boolean</span><span class="hl-1"> = (</span><span class="hl-5">process</span><span class="hl-1">.</span><span class="hl-5">env</span><span class="hl-1">.</span><span class="hl-6">NODE_ENV</span><span class="hl-1"> === </span><span class="hl-2">&#39;development&#39;</span><span class="hl-1">);</span><br/><br/><span class="hl-3">const</span><span class="hl-1"> </span><span class="hl-0">propertiesFilter</span><span class="hl-1">: </span><span class="hl-7">PropertiesFilter</span><span class="hl-1"> = (</span><span class="hl-5">properties</span><span class="hl-1">) </span><span class="hl-3">=&gt;</span><span class="hl-1"> ({</span><br/><span class="hl-1">  </span><span class="hl-0">return</span><span class="hl-1"> (Object.keys(</span><span class="hl-5">properties</span><span class="hl-1">)</span><br/><span class="hl-1">    .</span><span class="hl-0">filter</span><span class="hl-1">(</span><span class="hl-5">tag</span><span class="hl-1"> =&gt;</span><span class="hl-8"> /addr:.</span><span class="hl-9">*</span><span class="hl-8">/</span><span class="hl-3">i</span><span class="hl-1">.</span><span class="hl-0">test</span><span class="hl-1">(</span><span class="hl-5">tag</span><span class="hl-1">))</span><br/><span class="hl-1">    .</span><span class="hl-0">reduce</span><span class="hl-1">((</span><span class="hl-5">filtered</span><span class="hl-1">, </span><span class="hl-5">tag</span><span class="hl-1">) </span><span class="hl-3">=&gt;</span><span class="hl-1"> {</span><br/><span class="hl-1">      </span><span class="hl-7">filtered</span><span class="hl-1">[</span><span class="hl-5">tag</span><span class="hl-1">] = </span><span class="hl-5">properties</span><span class="hl-1">[</span><span class="hl-5">tag</span><span class="hl-1">];</span><br/><span class="hl-1">      </span><span class="hl-7">return</span><span class="hl-1"> </span><span class="hl-5">filtered</span><span class="hl-1">;</span><br/><span class="hl-1">    }, {}));</span><br/><span class="hl-1">});</span><br/><br/><span class="hl-3">const</span><span class="hl-1"> </span><span class="hl-6">useOverpassql</span><span class="hl-1">: </span><span class="hl-7">RuleSetUse</span><span class="hl-1"> = {</span><br/><span class="hl-1">  </span><span class="hl-5">test:</span><span class="hl-8"> /</span><span class="hl-10">\.</span><span class="hl-8">overpass</span><span class="hl-11">(</span><span class="hl-8">ql</span><span class="hl-11">)</span><span class="hl-9">?</span><span class="hl-12">$</span><span class="hl-8">/</span><span class="hl-1">,</span><br/><span class="hl-1">  </span><span class="hl-5">options:</span><span class="hl-1"> {</span><br/><span class="hl-1">    </span><span class="hl-13">// minify the query</span><br/><span class="hl-1">    </span><span class="hl-5">stripWhitespace:</span><span class="hl-1"> !</span><span class="hl-6">IS_DEV</span><span class="hl-1">,</span><br/><span class="hl-1">    </span><span class="hl-5">stripComments:</span><span class="hl-1"> !</span><span class="hl-6">IS_DEV</span><span class="hl-1">,</span><br/><br/><span class="hl-1">    </span><span class="hl-13">// cache API response</span><br/><span class="hl-1">    </span><span class="hl-5">cacheGeoJSON:</span><span class="hl-1"> !</span><span class="hl-6">IS_DEV</span><span class="hl-1">,</span><br/><br/><span class="hl-1">    </span><span class="hl-13">// remove tags we&#39;re not interested in</span><br/><span class="hl-1">    </span><span class="hl-5">keepProperties:</span><span class="hl-1"> </span><span class="hl-3">false</span><span class="hl-1">,</span><br/><span class="hl-1">    </span><span class="hl-5">propertiesFilter</span><br/><span class="hl-1">  }</span><br/><span class="hl-1">}</span><br/><br/><span class="hl-4">export</span><span class="hl-1"> </span><span class="hl-3">const</span><span class="hl-1"> </span><span class="hl-6">config</span><span class="hl-1">: </span><span class="hl-7">Configuration</span><span class="hl-1"> = {</span><br/><span class="hl-1">  </span><span class="hl-5">module:</span><span class="hl-1"> {</span><br/><span class="hl-1">    </span><span class="hl-5">rules:</span><span class="hl-1"> [</span><span class="hl-5">useOverpassql</span><span class="hl-1">]</span><br/><span class="hl-1">  }</span><br/><span class="hl-1">}</span>
+</code><button>Copy</button></pre>
+<p>Use the <code>import</code> in your project:</p>
+<pre><code class="language-typescript"><span class="hl-4">import</span><span class="hl-1"> { </span><span class="hl-5">overpassJson</span><span class="hl-1"> } </span><span class="hl-4">from</span><span class="hl-1"> </span><span class="hl-2">&#39;overpass-ts&#39;</span><span class="hl-1">;</span><br/><span class="hl-4">import</span><span class="hl-1"> </span><span class="hl-5">osmtogeojson</span><span class="hl-1"> </span><span class="hl-4">from</span><span class="hl-1"> </span><span class="hl-2">&#39;osmtogeojson&#39;</span><span class="hl-1">;</span><br/><span class="hl-4">import</span><span class="hl-1"> </span><span class="hl-5">query</span><span class="hl-1"> </span><span class="hl-4">from</span><span class="hl-1"> </span><span class="hl-2">&#39;./my-query.overpassql&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-3">const</span><span class="hl-1"> </span><span class="hl-6">endpoint</span><span class="hl-1">: </span><span class="hl-7">string</span><span class="hl-1"> = </span><span class="hl-2">&#39;https://overpass-api.de/api/interpreter&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-5">console</span><span class="hl-1">.</span><span class="hl-0">log</span><span class="hl-1">(</span><span class="hl-5">query</span><span class="hl-1">); </span><span class="hl-13">// print the query to console</span><br/><span class="hl-0">overpassJson</span><span class="hl-1">(</span><span class="hl-5">query</span><span class="hl-1">, { </span><span class="hl-5">endpoint</span><span class="hl-1"> }).</span><span class="hl-0">then</span><span class="hl-1">((</span><span class="hl-5">osmdata</span><span class="hl-1">) </span><span class="hl-3">=&gt;</span><span class="hl-1"> {</span><br/><span class="hl-1">  </span><span class="hl-3">const</span><span class="hl-1"> </span><span class="hl-6">geoJSON</span><span class="hl-1"> = </span><span class="hl-0">osmtogeojson</span><span class="hl-1">(</span><span class="hl-5">osmdata</span><span class="hl-1">);</span><br/><br/><span class="hl-1">  </span><span class="hl-13">// work with the GeoJSON or OSM response</span><br/><span class="hl-1">  </span><span class="hl-13">// e.g., integrate with Leaflet.js GeoJSON layers</span><br/><span class="hl-1">});</span>
+</code><button>Copy</button></pre>
+<a id="md:contributing" class="tsd-anchor"></a><h2><a href="#md:contributing">Contributing</a></h2><a id="md:general-advice" class="tsd-anchor"></a><h3><a href="#md:general-advice">General advice</a></h3><p>The following procedure for contributing changes is recommended:</p>
+<ul>
+<li>Branch to <code>fix/[issue or description]</code>, <code>feature/[issue or description]</code>, ...</li>
+<li>Implement your changes and commit</li>
+<li>Open a <a href="https://github.com/johnlettman/overpassql-loader/pulls">pull request</a></li>
+</ul>
+<p>Of course, you&#39;re welcome to use any reasonable workflow that best suits your
+style. After all, I committed to unprotected main throughout this project.</p>
+<p>Please add any of the following strings to your commit message if the commit
+does not modify any code (e.g., documentation work):</p>
+<p><code>[skip ci]</code>, <code>[ci skip]</code>, <code>[no ci]</code>, <code>[skip actions]</code>, <code>[actions skip]</code></p>
+<p>See: <a href="https://docs.github.com/en/actions/managing-workflow-runs/skipping-workflow-runs">GitHub documentation, &quot;skipping workflow runs&quot;</a></p>
+<a id="md:versioning" class="tsd-anchor"></a><h3><a href="#md:versioning">Versioning</a></h3><p>To bump versions:</p>
+<pre><code class="language-bash"><span class="hl-0">yarn</span><span class="hl-1"> </span><span class="hl-2">version</span><span class="hl-1"> </span><span class="hl-3">--patch</span><br/><span class="hl-0">yarn</span><span class="hl-1"> </span><span class="hl-2">version</span><span class="hl-1"> </span><span class="hl-3">--minor</span><br/><span class="hl-0">yarn</span><span class="hl-1"> </span><span class="hl-2">version</span><span class="hl-1"> </span><span class="hl-3">--major</span>
+</code><button>Copy</button></pre>
+<a id="md:licensing" class="tsd-anchor"></a><h3><a href="#md:licensing">Licensing</a></h3><p>Given this project is licensed under the MIT License, please be mindful that
+your contributions will fall under the same licensing scheme.</p>
+<a id="md:related-projects-amp-dependencies" class="tsd-anchor"></a><h2><a href="#md:related-projects-amp-dependencies">Related Projects &amp; Dependencies</a></h2><p>The following projects are core to the function of OverpassQL Loader.
+They are worth checking out. The authors have my thanks. :-)</p>
+<a id="md:overpass-ts" class="tsd-anchor"></a><h3><a href="#md:overpass-ts"><a href="https://github.com/1papaya/overpass-ts">overpass-ts</a></a></h3><blockquote>
+<p>promise-based overpass api client in typescript</p>
+</blockquote>
+<ul>
+<li><a href="https://github.com/1papaya/overpass-ts">GitHub Repository</a></li>
+<li><a href="https://www.npmjs.com/package/overpass-ts">NPM Package</a></li>
+</ul>
+<a id="md:osmtogeojson" class="tsd-anchor"></a><h3><a href="#md:osmtogeojson"><a href="https://github.com/tyrasd/osmtogeojson">osmtogeojson</a></a></h3><blockquote>
+<p>Converts OSM data to GeoJSON.</p>
+</blockquote>
+<ul>
+<li><a href="https://github.com/tyrasd/osmtogeojson">GitHub Repository</a></li>
+<li><a href="https://www.npmjs.com/package/osmtogeojson">NPM Package</a></li>
+</ul>
+<a id="md:license" class="tsd-anchor"></a><h2><a href="#md:license">License</a></h2><p>This project is licensed under the MIT License.
+See <code>LICENSE</code> for more information.</p>
+</div></div>
+<div class="col-sidebar">
+<div class="page-menu">
+<div class="tsd-navigation settings">
+<details class="tsd-index-accordion"><summary class="tsd-accordion-summary">
+<h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4.93896 8.531L12 15.591L19.061 8.531L16.939 6.409L12 11.349L7.06098 6.409L4.93896 8.531Z" fill="var(--color-text)" id="icon-chevronDown"></path></svg>Settings</h3></summary>
+<div class="tsd-accordion-details">
+<div class="tsd-filter-visibility">
+<h4 class="uppercase">Member Visibility</h4><form>
+<ul id="tsd-filter-options">
+<li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-protected" name="protected"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Protected</span></label></li>
+<li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-private" name="private"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Private</span></label></li>
+<li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-inherited" name="inherited" checked/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Inherited</span></label></li>
+<li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-external" name="external"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>External</span></label></li></ul></form></div>
+<div class="tsd-theme-toggle">
+<h4 class="uppercase">Theme</h4><select id="tsd-theme"><option value="os">OS</option><option value="light">Light</option><option value="dark">Dark</option></select></div></div></details></div>
+<details open class="tsd-index-accordion tsd-page-navigation"><summary class="tsd-accordion-summary">
+<h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><use href="#icon-chevronDown"></use></svg>On This Page</h3></summary>
+<div class="tsd-accordion-details">
+<ul>
+<li>
+<ul>
+<li><a href="#md:features"><span>Features</span></a></li>
+<li>
+<ul>
+<li><a href="#md:installation"><span>Installation</span></a></li>
+<li><a href="#md:usage"><span>Usage</span></a></li>
+<li><a href="#md:contributing"><span>Contributing</span></a></li>
+<li>
+<ul>
+<li><a href="#md:general-advice"><span>General advice</span></a></li>
+<li><a href="#md:versioning"><span>Versioning</span></a></li>
+<li><a href="#md:licensing"><span>Licensing</span></a></li></ul></li>
+<li><a href="#md:related-projects-amp-dependencies"><span>Related <wbr/>Projects &amp; <wbr/>Dependencies</span></a></li>
+<li>
+<ul>
+<li><a href="#md:overpass-ts"><span>overpass-<wbr/>ts</span></a></li>
+<li><a href="#md:osmtogeojson"><span>osmtogeojson</span></a></li></ul></li>
+<li><a href="#md:license"><span>License</span></a></li></ul></li></ul></li></ul></div></details></div>
+<div class="site-menu">
+<nav class="tsd-navigation"><a href="index.html" class="current"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><g id="icon-4"><rect fill="var(--color-icon-background)" stroke="var(--color-ts-namespace)" stroke-width="1.5" x="1" y="1" width="22" height="22" rx="6"></rect><path d="M9.33 16V7.24H10.77L13.446 14.74C13.43 14.54 13.41 14.296 13.386 14.008C13.37 13.712 13.354 13.404 13.338 13.084C13.33 12.756 13.326 12.448 13.326 12.16V7.24H14.37V16H12.93L10.266 8.5C10.282 8.692 10.298 8.936 10.314 9.232C10.33 9.52 10.342 9.828 10.35 10.156C10.366 10.476 10.374 10.784 10.374 11.08V16H9.33Z" fill="var(--color-text)"></path></g></svg><span>OverpassQL <wbr/>Loader</span></a>
+<ul class="tsd-small-nested-navigation">
+<li><a href="modules/loader.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-4"></use></svg><span>loader</span></a></li>
+<li><a href="modules/properties.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-4"></use></svg><span>properties</span></a></li>
+<li><a href="modules/syntax.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-4"></use></svg><span>syntax</span></a></li></ul></nav></div></div></div>
+<div class="tsd-generator">
+<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p></div>
+<div class="overlay"></div></body></html>
