@@ -10,6 +10,8 @@
   <h1>OverpassQL Loader</h1>
 </div>
 
+[![codecov](https://codecov.io/gh/johnlettman/overpassql-loader/branch/main/graph/badge.svg?token=Y5G10XVV29)](https://codecov.io/gh/johnlettman/overpassql-loader)
+
 This Webpack loader allows you to pull in
 [OverpassQL](https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL)
 files as strings, providing seamless integration of OpenStreetMap data into
