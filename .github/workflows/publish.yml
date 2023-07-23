@@ -18,20 +18,25 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version-file: .nvmrc
+        registry-url: 'https://registry.npmjs.org'
 
     - name: Install dependencies
       run: yarn install --frozen-lockfile
 
     - name: Build
-      run: |
-        yarn build
+      run: yarn build
 
-    - if: ${{ github.event_name == 'push' && github.event.ref == 'refs/heads/main' }}
-      name: Configure npm token
-      run: npm config set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
+    - name: Pack
+      run: yarn pack
 
-    - if: ${{ github.event_name == 'push' && github.event.ref == 'refs/heads/main' }}
-      uses: LumaKernel/npm-release-pack-action@v1.0.1
+    - name: Upload artifact
+      uses: actions/upload-artifact@v3
       with:
-        github_token: ${{ github.token }}
-        publish_command: 'yarn publish --access public'
+        name: overpassql-loader
+        path: overpassql-loader-*.tgz
+
+    - name: Publish NPM Package
+      if: github.ref == 'refs/heads/master'
+      uses: JS-DevTools/npm-publish@v2
+      with:
+        token: ${{ secrets.NPM_TOKEN }}
