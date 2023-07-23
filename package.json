@@ -42,7 +42,7 @@
     "typedoc-plugin-rename-defaults": "^0.6.5",
     "typescript": "^5.1.6"
   },
-  "peerDependencies": {
+  "dependencies": {
     "webpack": "^5.88.1",
     "geojson": "^0.5.0",
     "osmtogeojson": "^3.0.0-beta.5",
