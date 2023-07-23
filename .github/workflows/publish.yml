@@ -1,0 +1,37 @@
+name: Publish
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  release:
+    name: Release
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    - name: Setup Node
+      uses: actions/setup-node@v3
+      with:
+        node-version-file: .nvmrc
+
+    - name: Install dependencies
+      run: yarn install --frozen-lockfile
+
+    - name: Build
+      run: |
+        yarn build
+
+    - if: ${{ github.event_name == 'push' && github.event.ref == 'refs/heads/main' }}
+      name: Configure npm token
+      run: npm config set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
+
+    - if: ${{ github.event_name == 'push' && github.event.ref == 'refs/heads/main' }}
+      uses: LumaKernel/npm-release-pack-action@v1.0.1
+      with:
+        github_token: ${{ github.token }}
+        publish_command: 'yarn publish --access public'
