@@ -1,7 +1,16 @@
-import { stripWhitespace, stripComments } from './syntax';
+import { stripWhitespace, stripComments, maxContentSize } from './syntax';
 
 describe('syntax', () => {
+  const throwOnReDoS = (f: (c: string) => string) => {
+    it('should throw on large inputs to prevent ReDoS', () => {
+      const massiveString = Array(maxContentSize + 2).join('x');
+      expect(() => f(massiveString)).toThrowError(/too big/);
+    });
+  };
+
   describe('.stripWhitespace', () => {
+    throwOnReDoS(stripWhitespace);
+
     it('should remove extra spaces', () => {
       const _in =
         'nwr["amenity"="school"](dataset);   nwr["amenity"="university"](dataset);';
@@ -22,7 +31,7 @@ describe('syntax', () => {
       const _in =
         'nwr["amenity"="school"](dataset);\n\n\n\r\n\r\n\nnwr["amenity"="university"](dataset);';
       const out =
-        'nwr["amenity"="school"](dataset);\nnwr["amenity"="university"](dataset);';
+        'nwr["amenity"="school"](dataset); nwr["amenity"="university"](dataset);';
       expect(stripWhitespace(_in)).toEqual(out);
     });
 
@@ -30,7 +39,7 @@ describe('syntax', () => {
       const _in =
         'nwr["amenity"="school"](dataset);\n\n\n\t\t \r \n\r\t\n\n nwr["amenity"="university"](dataset);';
       const out =
-        'nwr["amenity"="school"](dataset);\nnwr["amenity"="university"](dataset);';
+        'nwr["amenity"="school"](dataset); nwr["amenity"="university"](dataset);';
       expect(stripWhitespace(_in)).toEqual(out);
     });
 
@@ -54,6 +63,8 @@ describe('syntax', () => {
   });
 
   describe('.stripComments', () => {
+    throwOnReDoS(stripComments);
+
     it('should remove line comments', () => {
       const _in =
         '// Show schools\n' +
