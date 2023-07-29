@@ -43,10 +43,10 @@
     "typescript": "^5.1.6"
   },
   "dependencies": {
-    "webpack": "^5.88.1",
     "geojson": "^0.5.0",
-    "osmtogeojson": "^3.0.0-beta.5",
+    "osmtogeojson": "https://github.com/tyrasd/osmtogeojson#snyk-fix-65371a4c4920389f7e5127c141088511",
     "overpass-ts": "^4.3.8",
-    "simplify-geojson": "^1.0.5"
+    "simplify-geojson": "^1.0.5",
+    "webpack": "^5.88.1"
   }
 }
