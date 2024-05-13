@@ -3717,10 +3717,10 @@ typedarray@~0.0.5:
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.7.tgz#799207136a37f3b3efb8c66c40010d032714dc73"
   integrity sha512-ueeb9YybpjhivjbHP2LdFDAjbS948fGEPj+ACAMs4xCMmh72OCOMQWBQKlaN4ZNQ04yfLSDLSx1tGRIoWimObQ==
 
-typedoc-github-wiki-theme@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/typedoc-github-wiki-theme/-/typedoc-github-wiki-theme-1.1.0.tgz#d7db13543e3f02ff05b9fe4723031fa34cb74e68"
-  integrity sha512-VyFmz8ZV2j/qEsCjD5EtR6FgZsCoy64Zr6SS9kCTcq7zx69Cx4UJBx8Ga/naxqs08TDggE6myIfODY6awwAGcA==
+typedoc-github-wiki-theme@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/typedoc-github-wiki-theme/-/typedoc-github-wiki-theme-2.0.0.tgz#cd7b439c5ccdddb466189cdb484ea76bbe5f4b47"
+  integrity sha512-LwWS+14xNerup0BLR9sowSw0T0bTwNg5CCU90kvsCMWDocEFpDuuiD/5LPSvS1xns1KPY2QbfejuVj+nOvop2Q==
 
 typedoc-plugin-coverage@^3.1.0:
   version "3.1.1"
