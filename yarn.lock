@@ -3921,9 +3921,9 @@ typedarray@~0.0.5:
   integrity sha512-ueeb9YybpjhivjbHP2LdFDAjbS948fGEPj+ACAMs4xCMmh72OCOMQWBQKlaN4ZNQ04yfLSDLSx1tGRIoWimObQ==
 
 typedoc-github-wiki-theme@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/typedoc-github-wiki-theme/-/typedoc-github-wiki-theme-2.0.0.tgz#cd7b439c5ccdddb466189cdb484ea76bbe5f4b47"
-  integrity sha512-LwWS+14xNerup0BLR9sowSw0T0bTwNg5CCU90kvsCMWDocEFpDuuiD/5LPSvS1xns1KPY2QbfejuVj+nOvop2Q==
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/typedoc-github-wiki-theme/-/typedoc-github-wiki-theme-2.1.0.tgz#110af9cd8384179d91e8746ef87da2c18020f9ef"
+  integrity sha512-5j4vuoGwLn8PM1HeXocbwUF0Ra2qTFLeqsQwBQsLBPIx7Tl/lxkas1qIPFg/InOYwy9Y3Pn4xSjh+c/KM+jh6Q==
 
 typedoc-plugin-coverage@^3.1.0:
   version "3.4.0"
